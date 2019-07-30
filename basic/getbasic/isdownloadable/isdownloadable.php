@@ -1,7 +1,7 @@
 <?php
 //Criado por Anderson Ismael
 //10 de abril de 2019
-//http://archive.is/MAC5m
+//https://tinyurl.com/y6m8vuvp
 
 function isDownloadable($url) {
     $file_headers = @get_headers($url);
@@ -13,3 +13,4 @@ function isDownloadable($url) {
     }
     return $exists;
 }
+
