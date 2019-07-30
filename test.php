@@ -18,7 +18,7 @@ if(isdownloadable($urlDoFeed)){
     $items=extrairOsItemsDoFeed($feed);
     imprimirOsItemsDoFeed($items);
 }else{
-    print 'não é baixável'.PHP;
+    print 'não é baixável'.PHP_EOL;
 }
 //2. baixar o feed
 function baixarFeed($urlDoFeed){

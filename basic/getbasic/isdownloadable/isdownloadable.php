@@ -3,8 +3,13 @@
 //10 de abril de 2019
 //http://archive.is/MAC5m
 
-function isDownloadable($url, $method = 'HEAD') {
-    if (!$fp = curl_init($url)) return false;
-    return true;
+function isDownloadable($url) {
+    $file_headers = @get_headers($url);
+    if(!$file_headers || $file_headers[0] == 'HTTP/1.1 404 Not Found') {
+        $exists = false;
+    }
+    else {
+        $exists = true;
+    }
+    return $exists;
 }
-
